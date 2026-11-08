@@ -119,20 +119,6 @@ Exemples :
 
 L'utilisateur décrit l'infrastructure dans des fichiers `.tf`. Terraform lit ces fichiers, consulte son état et communique avec les APIs des providers pour déterminer et réaliser les changements nécessaires.
 
-  
-```mermaid
-flowchart TD
-    A["Fichiers Terraform (.tf)"] --> B["Terraform CLI"]
-    B --> C["Analyse de la configuration"]
-    C --> D["Lecture du Terraform State"]
-    D --> E["Terraform Plan"]
-    E --> F["Terraform Apply"]
-    F --> G["Provider"]
-    G --> H["API du fournisseur"]
-    H --> I["Infrastructure déployée"]
-    F --> J["Mise à jour du State"]
-```
-
 ### 2.3. Les composants essentiels
 
 #### Terraform CLI
@@ -383,7 +369,7 @@ $env:Path += ";C:\Users\Admin\Downloads\terraform_1.17.1_windows_amd64"
 ---
 
 ## 5. Premier déploiement AWS avec Terraform
-
+[Cliquez ici](https://github.com/halekammoun/Collaborative-Terraform-Labs/tree/main)
 ---
 
 ## 6. Ce qu'il faut absolument retenir
