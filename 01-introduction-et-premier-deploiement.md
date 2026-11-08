@@ -119,24 +119,7 @@ Exemples :
 
 L'utilisateur décrit l'infrastructure dans des fichiers `.tf`. Terraform lit ces fichiers, consulte son état et communique avec les APIs des providers pour déterminer et réaliser les changements nécessaires.
 
-```mermaid
-flowchart TD
-    A["1. User / Developer"] --> B["2. Écrit les fichiers .tf"]
-    B --> C["3. Terraform CLI"]
-    C --> D["4. Analyse et validation de la configuration"]
-    D --> E["5. Chargement du Provider"]
-    E --> F["6. Lecture du Terraform State"]
-    F --> G["7. Refresh : interrogation de l'infrastructure réelle"]
-    G --> H["8. Terraform Plan"]
-    H --> I{"9. Validation du plan par l'utilisateur"}
-    I -->|Non| B
-    I -->|Oui| J["10. Terraform Apply"]
-    J --> K["11. Provider AWS"]
-    K --> L["12. AWS API"]
-    L --> M["13. Création / Modification / Suppression"]
-    M --> N["14. Infrastructure AWS"]
-    N --> O["15. Mise à jour du Terraform State"]
-```
+  
 ```mermaid
 flowchart TD
     A["Fichiers Terraform (.tf)"] --> B["Terraform CLI"]
