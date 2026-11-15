@@ -41,11 +41,11 @@ Ce guide suppose des connaissances de base en :
 
 # 📖 Sommaire
 - [Chapitre 01: Introduction à l'Infrastructure as Code et premier déploiement](01-introduction-et-premier-deploiement.md) — IaC, fondamentaux Terraform, providers, State et premières commandes. `Séance 1`
-- [Chapitre 02: Workflow Terraform et gestion des ressources](02-automatisation-et-gestion-avancee-des-ressources.md) — workflow `init`, `validate`, `fmt`, `plan`, `apply`, `destroy`, ressources, références et dépendances. `Séance 2` >> **mock exams**
+- [Chapitre 02: Workflow Terraform et gestion des ressources](02-automatisation-et-gestion-avancee-des-ressources.md) — workflow `init`, `validate`, `fmt`, `plan`, `apply`, `destroy`, ressources, références et dépendances. `Séance 2` >> **mock exam 1**
 - [Chapitre 03: Variables et modules Terraform](03-variables-et-modules-terraform.md) — variables, outputs, types, expressions et modules. `Séance 3`
-- [Chapitre 04: Debug, logging et providers Terraform](04-debug-logging-et-providers-terraform.md) — providers, versions, lock file et journalisation détaillée. `Séance 4` >> **mock exams**
+- [Chapitre 04: Debug, logging et providers Terraform](04-debug-logging-et-providers-terraform.md) — providers, versions, lock file et journalisation détaillée. `Séance 4` >> **mock exam 2**
 - [Chapitre 05: HCP Terraform et langage Terraform](05-hcp-terraform-et-langage-terraform.md) — expressions, fonctions et fonctionnalités HCP Terraform. `Séance 5`
-- [Chapitre 06: Gestion avancée des infrastructures](06-gestion-avancee-des-infrastructures.md) — State, backends, drift, import, workspaces et maintenance. `Séance 6` >> **mock exams**
+- [Chapitre 06: Gestion avancée des infrastructures](06-gestion-avancee-des-infrastructures.md) — State, backends, drift, import, workspaces et maintenance. `Séance 6` >> **mock exam 3**
 - Examen TP `Séance 7`
 
 ---
