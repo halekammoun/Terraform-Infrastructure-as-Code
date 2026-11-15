@@ -65,8 +65,8 @@ Ce guide suppose des connaissances de base en :
 
 ## 📚 Références
 
-- [Terraform Documentation](https://developer.hashicorp.com/terraform/docs)
-- [Terraform Tutorials](https://developer.hashicorp.com/terraform/tutorials)
-- [AWS Documentation](https://docs.aws.amazon.com)
-- [AWS Provider Documentation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs)
-- [Terraform Associate 004 — Study Guide](https://developer.hashicorp.com/terraform/tutorials/certification-004/associate-study-004)
+- [Terraform Registry Doc](https://registry.terraform.io/namespaces/hashicorp)
+- [Terraform Associate (004) — Certification et objectifs officiels](https://docs.hashicorp.com/certifications/terraform-associate)
+- [Terraform Associate (004) — Exam Content List](https://docs.hashicorp.com/terraform/tutorials/certification-004/associate-review-004)
+- [Terraform Associate (004) — Learning Path](https://developer.hashicorp.com/terraform/tutorials/certification-004/associate-study-004)
+
