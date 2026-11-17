@@ -388,6 +388,7 @@ terraform {
 | `aws` | Nom local du provider |
 | `source` | Adresse du provider dans le Registry |
 | `version` | Contrainte de version du provider |
+
 À retenir : ce bloc indique à Terraform quel plugin télécharger et quelle version utiliser.
 
 ### 5.2. Bloc `provider` — Configuration AWS
