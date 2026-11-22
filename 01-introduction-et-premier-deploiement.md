@@ -368,8 +368,8 @@ $env:Path += ";C:\Users\Admin\Downloads\terraform_1.17.1_windows_amd64"
 ```
 ---
 
-## 5. Structure basique du code terraform avec les blocs terraform, provider et resource.
-### 5.1. Bloc terraform — Configuration générale
+## 4. Structure basique du code terraform avec les blocs terraform, provider et resource.
+### 4.1. Bloc terraform — Configuration générale
 
 ```bash
 terraform {
@@ -391,7 +391,7 @@ terraform {
 
 À retenir : ce bloc indique à Terraform quel plugin télécharger et quelle version utiliser.
 
-### 5.2. Bloc `provider` — Configuration AWS
+### 4.2. Bloc `provider` — Configuration AWS
 Syntaxe générale :
 
 ```hcl
@@ -410,7 +410,7 @@ provider "NOM_PROVIDER" {
 
 `required_providers` déclare la source et la version du plugin ; `provider` configure son utilisation.
 
-### 5.3. Bloc `resource` — Création et gestion des ressources
+### 4.3. Bloc `resource` — Création et gestion des ressources
 
 Syntaxe générale :
 
@@ -426,11 +426,11 @@ resource "TYPE_DE_RESSOURCE" "NOM_LOCAL" {
 - `NOM_LOCAL` : nom choisi librement pour identifier cette ressource.
 - Les arguments configurent la ressource.
 
-## 6. Premier déploiement AWS avec Terraform
+## 5. Premier déploiement AWS avec Terraform
 [Cliquez ici](https://github.com/halekammoun/Collaborative-Terraform-Labs/tree/main)
 ---
 
-## 7. Ce qu'il faut absolument retenir
+## 6. Ce qu'il faut absolument retenir
 
 #### Infrastructure as Code
 
