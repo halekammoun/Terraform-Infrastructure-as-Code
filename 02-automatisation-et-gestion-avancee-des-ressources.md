@@ -259,37 +259,46 @@ Dans cet exemple :
 
 Il construit donc son graphe de dépendances afin de déterminer l'ordre d'exécution approprié.
 
-La dépendance explicite avec `depends_on` sera étudiée dans le chapitre consacré aux fonctionnalités du langage Terraform.
+## 2.10 Dépendance explicite et implicite:
 
-## 2.10 Vue d'ensemble du workflow
+### 2.10.1 Dépendance implicite :
 
-Le schéma suivant résume les principales étapes du workflow Terraform.
+Terraform découvre automatiquement la dépendance grâce à une référence.
 
-```mermaid
-flowchart TD
-    A["Écrire les fichiers .tf"] --> B["terraform init"]
-    B --> C["terraform fmt"]
-    C --> D["terraform validate"]
-    D --> E["terraform plan"]
-    E --> F{"Plan correct ?"}
-    F -- "Non" --> A
-    F -- "Oui" --> G["terraform apply"]
-    G --> H["Infrastructure créée ou modifiée"]
-    H --> I["terraform destroy (si nécessaire)"]
+```bash
+resource "aws_eip" "public_ip" {
+  vpc      = true
+  instance = aws_instance.web_server.id
+}
 ```
 
-## 2.11 Résumé des commandes
+Ici :
+aws_instance.web_server.id
 
-| Commande | Rôle |
-|---|---|
-| `terraform init` | Initialise le répertoire de travail. |
-| `terraform fmt` | Formate les fichiers Terraform. |
-| `terraform validate` | Vérifie la cohérence de la configuration. |
-| `terraform plan` | Prévisualise les changements prévus. |
-| `terraform apply` | Applique les changements. |
-| `terraform destroy` | Propose la suppression des ressources gérées. |
 
-## 2.12 À retenir pour l'examen
+La ressource aws_eip.public_ip dépend implicitement de aws_instance.web_server.
+
+### 2.10.2 Dépendance explicite :
+
+On déclare directement la dépendance avec depends_on.
+
+```bash
+resource "aws_instance" "web_server" {
+  ami           = "ami-123456"
+  instance_type = "t2.micro"
+
+  depends_on = [
+    aws_s3_bucket.company_data
+  ]
+}
+```
+
+Ici, Terraform doit respecter la dépendance déclarée envers le bucket S3.
+
+À retenir
+ Une référence à un attribut d'une autre ressource crée généralement une dépendance implicite. depends_on permet de déclarer explicitement une dépendance.
+
+## 2.11 À retenir pour l'examen
 
 - `terraform init` initialise le projet, le backend, les providers et les modules.
 - `.terraform.lock.hcl` conserve les sélections de versions et les checksums des providers.
@@ -302,7 +311,7 @@ flowchart TD
 - Les références entre ressources créent généralement des dépendances implicites.
 - Un plan sauvegardé avec `-out` peut être appliqué avec `terraform apply`.
 
-## 2.13 Quiz de révision
+## 2.12 Quiz de révision
 
 1. Quelle commande permet d'initialiser un répertoire Terraform ?
 2. Quelle est la différence entre `terraform validate` et `terraform plan` ?
